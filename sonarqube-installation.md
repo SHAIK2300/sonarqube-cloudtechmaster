@@ -35,9 +35,14 @@ sudo sysctl -p
     yum install -y postgresql-server postgresql-devel
     /usr/bin/postgresql-setup --initdb
 Need to change config file as shown in below
+   
+   
+   vi /var/lib/pgsql/data/postgresql.conf --> localhost='*'
+   
+   allowing remote address the above has to execute
     
     vi /var/lib/pgsql/data/pg_hba.conf
-Replace Method name "peer" to "md5"
+    Replace Method name "peer" to "md5"
 
 ![image](https://user-images.githubusercontent.com/68885738/90953619-aef2f800-e48a-11ea-9b50-489183e9b0c1.png)
 
